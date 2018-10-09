@@ -13,10 +13,11 @@ namespace Prime_Number_Generator
             Console.WriteLine("Enter the number you would like to find primes up to then press enter");
 
             int max = (Convert.ToInt32(Console.ReadLine()) - 1);
+            double sqrMax = Math.Sqrt(max);
             int j = 0;
-            var nums = Enumerable.Range(2, max).ToList();
+            var nums = Enumerable.Range(0, max).ToList();
 
-            for (int i = 2; i <= max;)
+            for (int i = 2; i <= sqrMax;)
             {
                 if (j == max)
                 {
@@ -25,18 +26,20 @@ namespace Prime_Number_Generator
                 }
                 else if (j < max)
                 {
-                    if (nums[j] % i == 0 && nums[j] != i)
+                    if (j % i == 0 && j != i)
                     {
                         nums[j] = 0;
                     }
                     j++;
                 }
             }
+            int x = 0;
             foreach (var k in nums)
             {
                 if (k != 0)
                 {
-                    Console.WriteLine(k);
+                    x++;
+                    Console.WriteLine(x +"-"+ k);
                 }
             }
         }
