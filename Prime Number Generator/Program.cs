@@ -33,15 +33,33 @@ namespace Prime_Number_Generator
                     j++;
                 }
             }
-            int x = 0;
+            int x = -1;
+            int lineBreak = 0;
             foreach (var k in nums)
             {
-                if (k != 0)
+                //Console.Write(" {0} ",k);
+                if (k != 0 )
                 {
-                    x++;
-                    Console.WriteLine(x +"-"+ k);
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write("X");
+                    Console.ForegroundColor = ConsoleColor.White;
+
                 }
+                else Console.Write(k);
+                //lineBreak++;
+                //if (lineBreak % sqrMax == 0)
+                //{
+                //    Console.WriteLine();
+                //}
+
+                //if (k != 0)
+                //{
+                //    x++;
+                //    Console.WriteLine(x +"-"+ k);
+                //}
             }
+
+            Console.ReadKey();
         }
     }
 }
