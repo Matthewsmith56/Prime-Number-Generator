@@ -6,16 +6,22 @@ using System.Threading.Tasks;
 
 namespace Prime_Number_Generator
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Enter the number you would like to find primes up to then press enter");
+            Console.WriteLine("Welcome to the prime number generator. How would you like to generate primes? " +
+                              "\n1 - Generate and list primes within a range of numbers" +
+                              "\n2 - Generate primes as X and composite numbers as 0 to visually display distribution within a range of numbers");
+
+            string selection = Console.ReadLine();
+
+            Console.WriteLine("Enter the number you would like to find primes up to");
 
             int max = (Convert.ToInt32(Console.ReadLine()) - 1);
             double sqrMax = Math.Sqrt(max);
-            int j = 0;
-            var nums = Enumerable.Range(0, max).ToList();
+            int j = 2;
+            List<int> nums = Enumerable.Range(0, max).ToList();
 
             for (int i = 2; i <= sqrMax;)
             {
@@ -26,40 +32,21 @@ namespace Prime_Number_Generator
                 }
                 else if (j < max)
                 {
-                    if (j % i == 0 && j != i)
+                    if (j % i == 0 && j != i || j == 1)
                     {
                         nums[j] = 0;
                     }
                     j++;
                 }
             }
-            int x = -1;
-            int lineBreak = 0;
-            foreach (var k in nums)
+            if (selection == "1")
             {
-                //Console.Write(" {0} ",k);
-                if (k != 0 )
-                {
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write("X");
-                    Console.ForegroundColor = ConsoleColor.White;
-
-                }
-                else Console.Write(k);
-                //lineBreak++;
-                //if (lineBreak % sqrMax == 0)
-                //{
-                //    Console.WriteLine();
-                //}
-
-                //if (k != 0)
-                //{
-                //    x++;
-                //    Console.WriteLine(x +"-"+ k);
-                //}
+                Numeric.NumericPrimes(nums);
             }
-
-            Console.ReadKey();
+            else if (selection == "2")
+            {
+                Visual.VisualPrimes(nums);
+            }
         }
     }
 }
