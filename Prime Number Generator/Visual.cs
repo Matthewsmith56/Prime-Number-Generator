@@ -16,17 +16,6 @@ namespace Prime_Number_Generator
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 else Console.Write(k);
-                    //lineBreak++;
-                    //if (lineBreak % sqrMax == 0)
-                    //{
-                    //    Console.WriteLine();
-                    //}
-
-                    //if (k != 0)
-                    //{
-                    //    x++;
-                    //    Console.WriteLine(x +"-"+ k);
-                    //}
             }
         }
     }
