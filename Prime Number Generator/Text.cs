@@ -31,15 +31,24 @@ namespace Prime_Number_Generator
                 }
                 if (selection2 == "2")
                 {
+                    int numBreak = 0;
+                    int sqRoot = Convert.ToInt32(Math.Sqrt(nums.Count));
+
                     foreach (int k in nums)
                     {
+                        if (numBreak % sqRoot == 0)
+                        {
+                            Console.WriteLine();
+                        }
                         if (k != 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.Write("X");
+                            Console.Write(" X");
                             Console.ForegroundColor = ConsoleColor.White;
                         }
-                        else Console.Write(k);
+                        else Console.Write(" {0}", k);
+
+                        numBreak++;
                     }
                 }
             }
