@@ -13,7 +13,7 @@ namespace Prime_Number_Generator
             Console.WriteLine("Welcome to the prime number generator. How would you like to generate primes? " +
                               "\n1 - Generate and list primes within a range of numbers" +
                               "\n2 - Generate primes as X and composite numbers as 0 to visually display distribution within a range of numbers" +
-                              "\n3 - Print to desktop text file");
+                              "\n3 - Print to desktop Markdown file");
 
             string selection = Console.ReadLine();
 

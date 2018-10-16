@@ -8,14 +8,14 @@ namespace Prime_Number_Generator
     {
         public static void PrintToText(List<int> nums)
         {
-            Console.WriteLine("What would you like printed into the text file?" +
+            Console.WriteLine("What would you like printed into the Markdown file?" +
                                   "\n1 - Prime Numbers" +
                                   "\n2 - Prime Numbers represented by 0 and X");
             string selection2 = Console.ReadLine();
 
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-            using (StreamWriter writer = new StreamWriter(path + "\\Prime_Output.txt"))
+            using (StreamWriter writer = new StreamWriter(path + "\\Prime_Output.md"))
             {
                 Console.SetOut(writer);
 
