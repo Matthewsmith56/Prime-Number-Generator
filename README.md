@@ -3,8 +3,7 @@ Generates prime numbers up to user input using a Sieve of Eratosthenes. Also all
 
 I have taken an interest in prime number generation as a side project during my training course. The complexity of generating
 larger and larger primes force the coder to become more and more creative in how he or she programs the software to search for these
-prime numbers. This has helped me hone my coding skills while allowing me to learn more about the complexity and elegance
-of prime numbers.
+prime numbers. This has helped me hone my coding skills while allowing me to learn more about the complexity of prime numbers.
 
 Currently my code does three things
 
