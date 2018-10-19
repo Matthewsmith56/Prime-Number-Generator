@@ -43,7 +43,7 @@ namespace Prime_Number_Generator
                         if (k != 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.Write("**X**");
+                            Console.Write(" **X**");
                             Console.ForegroundColor = ConsoleColor.White;
                         }
                         else Console.Write(" {0}", k);
